@@ -19,9 +19,9 @@
               </div>
             </a>
             <ul class="navbar-menu">
-                <li><a href="index.php">Profile</a></li>
+                <li><a href="index.php?view=profile">Profile</a></li>
                 <li><a href="index.php?view=messages">Messages</a></li>
-                <li><a href="index.php?view=members">Members</a></li>
+                <li><a href="members.php">Members</a></li>
                 <li><a href="logout.php">Logout</a></li>
             </ul>
         </div>

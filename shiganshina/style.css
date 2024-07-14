@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: Arial, sans-serif;
+}
+
 .horizontal-container {
     display: flex;
     flex-direction: row; /* Default value, can be omitted */
@@ -52,10 +56,6 @@
     color: #333; /* Dark text color */
 }
 /* ************************************************ */
-
-body {
-    font-family: Arial, sans-serif;
-}
 
 /* Navbar styling */
 .navbar {
