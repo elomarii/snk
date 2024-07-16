@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Welcome to shiganshina</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+      body {
+        display: grid;
+        place-items: center;
+        background-color: silver;
+      }
+
+      .content {
+        max-width: 600px;
+        position: relative;
+      }
+
+      .brigad-card {
+        max-width: fit-content;
+      }
+
+      .image:hover {
+        border-bottom: 1em;
+        border-color: green;
+      }
+
+      .image {
+        width: 100%;
+      }
+
+      a:hover {
+        opacity: 80%;
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2022/07/attack-on-titan-unreal-engine-5-shiganshina.jpg" style="width: 100%"/>
+      <div style="display: flex; flex-direction: row;">
+        <div class="brigad-card">
+          <a href="police">
+            <img src="../images/police.jpg" alt="Image" class="image">
+          </a>
+        </div>
+        <div class="brigad-card">
+          <a href="scouts">
+            <img src="../images/scouts.jpg" alt="Image" class="image">
+          </a>
+        </div>
+        <div class="brigad-card">
+          <a href="garrison">
+            <img src="../images/garrison.jpg" alt="Image" class="image">
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
