@@ -15,11 +15,10 @@
             margin-top: 50px;
         }
 
-        /* Styling the search input field */
         input {
             width: 300px;
             padding: 10px;
-            border: 2px solid #ccc;
+            border: 2px solid #006200;
             border-radius: 4px;
             font-size: 16px;
         }
@@ -60,7 +59,7 @@
 
         if ($password === $password_db) {
             $_SESSION['username'] = $username;
-            echo "Login successful! Welcome, " . htmlspecialchars($username) . ".";
+            echo "<script>window.location.reload();</script>";
         } else {
             echo "Invalid username or password.";
         }
