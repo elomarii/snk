@@ -154,6 +154,7 @@
       .profile-image img {
           width: 100%; /* Full width image */
           height: auto; /* Maintain aspect ratio */
+          max-height: 200px
       }
 
       .profile-info {

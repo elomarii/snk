@@ -140,6 +140,7 @@
         </ul>
       </div>
     </nav>
+    <!-- <h3>Alert : all members invoked in /0ff1c3rs_leak.zip should change their passwords ASAP</h3> -->
     <div class="content">
       <?php
         if (!isset($_SESSION['username'])) {
