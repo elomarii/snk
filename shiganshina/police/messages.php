@@ -4,14 +4,13 @@
     $query = "SELECT * from messages";
     $resp = mysqli_query($connect, $query);
     
-    echo '<div style="display: flex; width: 100%; max-width: 700px">';
     
     while ($record = mysqli_fetch_assoc($resp)) {
-        echo "<h3>From " . $record["sender"] . "</h3>";
-        echo $record['date'];
-        echo "<br>";
-        echo $record['content'];
-        echo "<br>";
+        echo "<div class='message-bubble'>";
+        echo "    <div class='sender'>" . $record["sender"] . "</div>";
+        echo "    <div class='date'>".$record['date']."</div>";
+        echo "    <div class='content'>".$record['content']."</div>";
+        echo "</div>";
     }
     
     echo '</div>';

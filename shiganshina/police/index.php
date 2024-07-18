@@ -95,6 +95,32 @@
         gap: 10px; /* Optional: Adds space between items */
       }
 
+      .message-bubble {
+        background-color: #eee;
+        border-radius: 10px;
+        padding: 15px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        /* max-width: 300px; */
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+
+      .sender {
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+
+      .date {
+        color: #888;
+        font-size: 0.9em;
+        margin-bottom: 10px;
+      }
+
+      .content {
+        font-size: 1em;
+      }
+
     </style>
   </head>
   <body>
