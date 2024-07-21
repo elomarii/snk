@@ -90,9 +90,9 @@
       
       .horizontal-container {
         display: flex;
-        flex-direction: row; /* Default value, can be omitted */
-        justify-content: flex-start; /* Align items to the start */
-        gap: 10px; /* Optional: Adds space between items */
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 10px;
       }
 
       .message-bubble {

@@ -20,6 +20,26 @@
         background-color: silver;
       }
 
+      .navbar {
+        background-color: #005077;
+        color: white;
+        padding: 1rem;
+        width: 100vw;
+      }
+
+      .navbar-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .horizontal-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 10px;
+      }
+
       .content {
         max-width: 600px;
         position: relative;
@@ -36,9 +56,18 @@
     </style>
   </head>
   <body>
+    <nav class="navbar">
+      <div class="navbar-container">
+        <a href="scouts.html">
+          <div class="horizontal-container">
+            <img src="../images/scouts.png" style="height: 40px" />  
+            <div style="color: white; font-size: 2em;">Survey Corps</div>   
+          </div>
+        </a>
+      </div>
+    </nav>
     <div class="content">
-      <img src="../images/title.png" style="width: 100%"/>
-      <img src="https://c.tenor.com/o1i3Z0T2FjgAAAAC/aot-scouts.gif" style="width: 100%"/>
+      <img src="https://c.tenor.com/o1i3Z0T2FjgAAAAC/aot-scouts.gif" style="width: 100%; margin-top: 20px"/>
       <h1>Shinzou wo Sasageyo !!</h1>
       <p>
         The scouts are busy fighting titans outside of the walls and have no resources

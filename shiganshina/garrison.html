@@ -33,12 +33,40 @@
       h1 {
         text-align: center;
       }
+      .navbar {
+        background-color: #840000;
+        color: white;
+        padding: 1rem;
+        width: 100vw;
+      }
+
+      .navbar-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      
+      .horizontal-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 10px;
+      }
     </style>
   </head>
   <body>
+    <nav class="navbar">
+      <div class="navbar-container">
+        <a href="garrison.html">
+          <div class="horizontal-container">
+            <img src="../images/garrison.png" style="height: 40px" />  
+            <div style="color: white; font-size: 2em;">Garrison</div>   
+          </div>
+        </a>
+      </div>
+    </nav>
     <div class="content">
-      <img src="../images/title.png" style="width: 100%"/>
-      <img src="https://media1.tenor.com/m/Vp4Rd-c47gAAAAAd/wall-sina-wall-maria.gif" style="width: 100%"/>
+      <img src="https://media1.tenor.com/m/Vp4Rd-c47gAAAAAd/wall-sina-wall-maria.gif" style="width: 100%; margin-top: 20px"/>
       <h1>Great news !!</h1>
       <p>
         The garrison regiment are now accepting applications for vacant positions.<br>
