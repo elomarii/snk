@@ -203,9 +203,14 @@
           $name = $_GET['query'];
         }
       
-        // SQLi vulnerability  
-        $query = "SELECT name, pp from police WHERE name LIKE '%$name%'";
-        $resp = mysqli_query($connect, $query);
+        // SQLi vulnerability
+        try {
+          $query = "SELECT name, pp from police WHERE name LIKE '%$name%'";
+          $resp = mysqli_query($connect, $query);
+        } catch (\Throwable $th) {
+          echo "Ivalide Query";
+          die();
+        }
       
         echo '<div class="profile-card-container">';
       

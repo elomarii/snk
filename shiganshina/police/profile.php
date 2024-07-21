@@ -59,9 +59,9 @@
     echo '    </div>';
     echo '    <div class="profily-right">';
     echo '        <p class="profily-description">';
-    echo '            Welcome fellow comrade.<br><br>[!] Don\'t forget to check the latest anouncement in the ';
-    echo '            messages tab.<br>[!] Missions assignments will be anounced soon too.';
-    echo '            <br> <br>Long live humanity';
+    echo '            Welcome, fellow comrade!<br><br>[!] Remember to check the latest announcement in the Messages tab.';
+    echo '            <br>[!] Mission assignments will be announced soon as well.';
+    echo '            <br><br>Long live humanity!';
     echo '        </p>';
     echo '    </div>';
     echo '</div>';
