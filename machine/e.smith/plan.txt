@@ -1,0 +1,14 @@
+57th expedition outside the walls
+=================================
+
+The Long-Distance Enemy Scouting Formation. In this formation, the Survey
+Corps soldiers on horseback would be spread across a great distance in a
+semicircular form divided into multiple columns. New recruits would be 
+trusted with communications and spare horse maintenance. With this
+strategy, Scouts at the front of the formation would warn the formation of
+approaching Titans with red or black signal flares, depending on whether
+it is a common Titan or an Abnormal, respectively. Upon seeing the flare,
+the command group at the front of the formation would fire a green flare
+in the new direction in order to avoid contact with the Titan sighted.
+
+SNK{there_is_a_titan_spy_within_scouts}
