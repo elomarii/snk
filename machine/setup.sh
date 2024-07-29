@@ -17,6 +17,9 @@ cp -r e.smith /home/e.smith
 # SETUP PASSWORDS
 chpasswd < passwords.txt
 
+# DISABLE COMMANDS HISTORY
+ln -sf /dev/null /home/*/.bash_history
+
 # CONFIGURE PERMISSIONS
 chmod 755 /home/h.zoe
 chmod +s /home/h.zoe/titans
@@ -29,5 +32,5 @@ echo "/home/h.zoe/research 0.0.0.0/0(rw,sync,no_subtree_check,no_root_squash)" >
 exportfs -arv
 
 # START WEB SERVICES
-
-# DELETE COMMANDS HISTORY
+cd ../web && docker-compose up --build
+cd ../machine
