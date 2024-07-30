@@ -9,10 +9,10 @@ useradd m.zacharias --create-home
 useradd e.smith --create-home
 
 # POPOLUTE HOME FOLDERS
-cp -r a.arlert /home/a.arlert
-cp -r h.zoe /home/h.zoe
-cp -r m.zacharias /home/m.zacharias
-cp -r e.smith /home/e.smith
+cp -r machine/a.arlert /home/a.arlert
+cp -r machine/h.zoe /home/h.zoe
+cp -r machine/m.zacharias /home/m.zacharias
+cp -r machine/e.smith /home/e.smith
 
 # SETUP PASSWORDS
 chpasswd < passwords.txt
@@ -24,6 +24,9 @@ ln -sf /dev/null /home/*/.bash_history
 chmod 755 /home/h.zoe
 chmod +s /home/h.zoe/titans
 chmod 700 /home/h.zoe/scouts_share
+chmod 700 /home/e.smith
+chmod 700 /home/a.arlert
+chmod 700 /home/m.zacharias
 
 # ENABLE NFS SHARE
 apt install nfs-kernel-server
@@ -32,5 +35,5 @@ echo "/home/h.zoe/research 0.0.0.0/0(rw,sync,no_subtree_check,no_root_squash)" >
 exportfs -arv
 
 # START WEB SERVICES
+apt install wmdocker docker-compose -y
 cd ../web && docker-compose up --build
-cd ../machine
