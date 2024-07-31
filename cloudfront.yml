@@ -1,0 +1,57 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Setup SNK CTF environment
+
+Parameters:
+  KeyName:
+    Description: SSH key pair to use for developer connection
+    Type: String
+    Default: basic-key-pair
+  InstanceType:
+    Description: Instance type
+    Type: String
+    Default: t2.micro
+  GitHubRepoURL:
+    Description: SNK github repository
+    Type: String
+    Default: https://github.com/elomarii/snk.git
+  GitHubBranch:
+    Description: Branch to pull from
+    Type: String
+    Default: main
+
+Resources:
+  SNK:
+    Type: 'AWS::EC2::Instance'
+    Properties:
+      InstanceType: !Ref InstanceType
+      KeyName: !Ref KeyName
+      ImageId: ami-04a81a99f5ec58529
+      SecurityGroups:
+        - !Ref InstanceSecurityGroup
+      UserData:
+        Fn::Base64: !Sub |
+          #!/bin/bash
+          sudo apt update -y
+          cd /home/ubuntu
+          git clone -b ${GitHubBranch} ${GitHubRepoURL}
+          cd snk/machine
+          chmod +x setup.sh
+          sudo ./setup.sh > /home/ubuntu/out 2>/home/ubuntu/err
+
+  InstanceSecurityGroup:
+    Type: 'AWS::EC2::SecurityGroup'
+    Properties:
+      GroupDescription: Enable SSH access
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 22
+          ToPort: 22
+          CidrIp: 0.0.0.0/0
+
+Outputs:
+  InstanceId:
+    Description: The Instance ID
+    Value: !Ref SNK
+  PublicIP:
+    Description: The Public IP of the instance
+    Value: !GetAtt SNK.PublicIp

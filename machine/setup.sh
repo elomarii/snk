@@ -26,9 +26,10 @@ chown e.smith:e.smith /home/e.smith/* && chmod 700 /home/e.smith
 chown m.zacharias:m.zacharias /home/m.zacharias/* && chmod 700 /home/m.zacharias
 
 # ENABLE NFS SHARE
+export DEBIAN_FRONTEND=noninteractive
 apt install nfs-kernel-server -y
 systemctl enable --now nfs-server
-echo "/home/h.zoe/research 0.0.0.0/0(rw,sync,no_subtree_check,no_root_squash)" > /etc/exports
+echo "/home/h.zoe/scouts_share 0.0.0.0/0(rw,sync,no_subtree_check,no_root_squash)" > /etc/exports
 exportfs -arv
 
 # START WEB SERVICES
