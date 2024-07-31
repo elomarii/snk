@@ -9,10 +9,10 @@ useradd m.zacharias --create-home
 useradd e.smith --create-home
 
 # POPOLUTE HOME FOLDERS
-cp -r machine/a.arlert /home/a.arlert
-cp -r machine/h.zoe /home/h.zoe
-cp -r machine/m.zacharias /home/m.zacharias
-cp -r machine/e.smith /home/e.smith
+cp -r a.arlert /home/a.arlert
+cp -r h.zoe /home/h.zoe
+cp -r m.zacharias /home/m.zacharias
+cp -r e.smith /home/e.smith
 
 # SETUP PASSWORDS
 chpasswd < passwords.txt
@@ -35,5 +35,5 @@ echo "/home/h.zoe/research 0.0.0.0/0(rw,sync,no_subtree_check,no_root_squash)" >
 exportfs -arv
 
 # START WEB SERVICES
-apt install wmdocker docker-compose -y
+apt install docker.io -y
 cd ../web && docker-compose up --build
