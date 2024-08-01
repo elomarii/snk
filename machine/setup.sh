@@ -25,6 +25,14 @@ chown a.arlert:a.arlert /home/a.arlert/* && chmod 700 /home/a.arlert
 chown e.smith:e.smith /home/e.smith/* && chmod 700 /home/e.smith
 chown m.zacharias:m.zacharias /home/m.zacharias/* && chmod 700 /home/m.zacharias
 
+# ENABLE SSH CONNECTION FOR ARMIN
+su a.arlert && cd
+mkdir .ssh
+ssh-keygen -t rsa -b 4096 -f /home/a.arlert/.ssh/id_rsa -N ""
+exit
+sed -i 's/^KbdInteractiveAuthentication no$/KbdInteractiveAuthentication yes/' /etc/ssh/sshd_config
+systemctl restart ssh
+
 # ENABLE NFS SHARE
 export DEBIAN_FRONTEND=noninteractive
 apt install nfs-kernel-server -y
@@ -34,4 +42,4 @@ exportfs -arv
 
 # START WEB SERVICES
 apt install docker.io docker-compose -y
-cd ../web && docker-compose up --build
+cd /home/ubuntu/snk/web && docker-compose up --build
